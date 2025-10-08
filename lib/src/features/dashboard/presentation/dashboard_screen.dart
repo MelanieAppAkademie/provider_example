@@ -29,7 +29,7 @@ class DashboardScreen extends StatelessWidget {
               );
             },
             icon: Builder(
-              builder: (ctx) {
+              builder: (context) {
                 final count = context.watch<ItemsProvider>().count;
                 return Badge.count(
                   count: count,
