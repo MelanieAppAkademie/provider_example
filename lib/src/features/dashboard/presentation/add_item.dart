@@ -43,7 +43,8 @@ class _AddItemScreenState extends State<AddItemScreen> {
                     // add item via provider
                     final title = _itemTitle.text.trim();
                     final desc = _descriptionTitle.text.trim();
-                    context.read<ItemsProvider>().addItem(title, desc);
+                    final quant = 20;
+                    context.read<ItemsProvider>().addItem(title, desc, quant);
                     Navigator.of(context).pop();
                   }
                 },
