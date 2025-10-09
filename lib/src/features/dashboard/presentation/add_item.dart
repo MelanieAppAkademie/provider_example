@@ -37,10 +37,8 @@ class _AddItemScreenState extends State<AddItemScreen> {
                     : null,
               ),
 
-              SizedBox(height: 20),
+              SizedBox(height: 150),
 
-              // TODO: Another commit
-              // TODO: Code aufräumen
               FilledButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
