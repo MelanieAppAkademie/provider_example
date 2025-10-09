@@ -30,12 +30,14 @@ class DashboardScreen extends StatelessWidget {
             },
             icon: Builder(
               builder: (context) {
-                final count = context.watch<ItemsProvider>().count;
+                final count = context
+                    .watch<ItemsProvider>()
+                    .count; // TODO: Beobachtet den aktuellen Zustand des Providers und aktualisiert die Page bei Änderungen
                 return Badge.count(
                   count: count,
                   child: const Icon(Icons.notifications),
                 );
-              },
+              }, // Hier ist ein neues Stückchen code
             ),
           ),
         ],
