@@ -1,11 +1,5 @@
 import 'package:flutter/foundation.dart';
-
-class Item {
-  final String title;
-  final String description;
-
-  Item({required this.title, required this.description});
-}
+import 'package:provider_example/src/features/items/data/item.dart';
 
 class ItemsProvider extends ChangeNotifier {
   final List<Item> _items = [];
