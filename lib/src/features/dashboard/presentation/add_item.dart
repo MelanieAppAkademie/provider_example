@@ -51,7 +51,7 @@ class _AddItemScreenState extends State<AddItemScreen> {
                     Navigator.of(context).pop();
                   }
                 },
-                child: const Text("Absenden"),
+                child: const Text("Absenden"), // hier ist was geändert worden
               ),
             ],
           ),
