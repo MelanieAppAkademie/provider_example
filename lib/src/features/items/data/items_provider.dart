@@ -9,9 +9,7 @@ class ItemsProvider extends ChangeNotifier {
   int get count => _items.length;
 
   void addItem(String title, String description, int quantity) {
-    _items.add(
-      Item(title: title, description: description, quantity: quantity),
-    );
+    _items.add(Item(title: title, description: description));
     notifyListeners();
   }
 
