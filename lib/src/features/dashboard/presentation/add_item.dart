@@ -37,22 +37,20 @@ class _AddItemScreenState extends State<AddItemScreen> {
                     : null,
               ),
 
-              SizedBox(height: 20),
               // commit here
               // TODO: Another commit
-              // TODO: Code aufräumen
               FilledButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
                     // add item via provider
                     final title = _itemTitle.text.trim();
                     final desc = _descriptionTitle.text.trim();
-                    final quant = 20;
-                    context.read<ItemsProvider>().addItem(title, desc, quant);
+
+                    context.read<ItemsProvider>().addItem(title, desc);
                     Navigator.of(context).pop();
                   }
                 },
-                child: const Text("Absenden"),
+                child: const Text("Absenden"), // hier ist was geändert worden
               ),
             ],
           ),
