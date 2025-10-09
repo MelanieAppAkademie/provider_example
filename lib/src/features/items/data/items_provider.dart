@@ -3,8 +3,13 @@ import 'package:flutter/foundation.dart';
 class Item {
   final String title;
   final String description;
+  final int quantity;
 
-  Item({required this.title, required this.description});
+  Item({
+    required this.title,
+    required this.description,
+    required this.quantity,
+  });
 }
 
 class ItemsProvider extends ChangeNotifier {
@@ -14,8 +19,10 @@ class ItemsProvider extends ChangeNotifier {
 
   int get count => _items.length;
 
-  void addItem(String title, String description) {
-    _items.add(Item(title: title, description: description));
+  void addItem(String title, String description, int quantity) {
+    _items.add(
+      Item(title: title, description: description, quantity: quantity),
+    );
     notifyListeners();
   }
 
